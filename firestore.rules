@@ -13,7 +13,7 @@ service cloud.firestore {
       allow read, update, delete: if false;
     }
 
-    // Aggregates are written only by the Cloud Function (admin SDK bypasses rules).
+    // Aggregates are written only by the tally job (admin SDK bypasses rules).
     match /stats/{doc} {
       allow read: if true;
       allow write: if false;

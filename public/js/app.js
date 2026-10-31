@@ -266,7 +266,7 @@ async function results() {
       <h3 style="margin-top:2rem">How much each person agrees with you</h3>
       <div class="hist" aria-hidden="true">${buckets.map((b) => `<div style="height:${(b / maxB) * 100}%"></div>`).join('')}</div>
       <div class="hist-axis" aria-hidden="true"><span>Agree on none</span><span>Agree on half</span><span>Agree on all</span></div>
-      <p class="small">The typical person here agrees with you on ${pct(median)} of the questions where you both took a side. Based on ${sims.length.toLocaleString()} ${s.demo ? 'demo' : 'recent'} responses.</p>
+      <p class="small">The typical person here agrees with you on ${pct(median)} of the questions where you both took a side. Based on ${sims.length.toLocaleString()} ${s.demo ? 'demo' : 'recent'} responses. New answers are added to the totals every few minutes.</p>
     </section>` : ''}` : ''}
     <section>
       <h2>Question by question</h2>
@@ -469,7 +469,7 @@ function about() {
       <h2>How the questions are written</h2>
       <p>Each statement is something a reasonable person could agree or disagree with. About half are worded so that “agree” is the usual left-of-center answer and half so it’s the usual right-of-center answer, which keeps people who agree with everything from looking like one side. We avoid loaded words. Some questions are ones polls show broad agreement on, and some are ones that split people sharply. Both kinds are real.</p>
       <h2>How the comparisons work</h2>
-      <p>“Most people agree with you” counts only people who took a side, not people who answered “not sure.” “The people least like you” means the half of recent respondents whose answers match yours the least. Anyone can take the questions, so the totals describe the people who came here, not a scientific sample of the country.</p>
+      <p>“Most people agree with you” counts only people who took a side, not people who answered “not sure.” “The people least like you” means the half of recent respondents whose answers match yours the least. Anyone can take the questions, so the totals describe the people who came here, not a scientific sample of the country. New answers are added to the totals every few minutes, and each individual submission is deleted as soon as it has been counted.</p>
       <h2>How candidates are described</h2>
       <p>Candidate positions come from nonpartisan voter guides and news coverage, with a link on every claim. We only score a candidate on an issue when <a href="https://guides.vote" target="_blank" rel="noopener">guides.vote</a> gave a summary label for it. Candidates are always listed in the same fixed order, never ranked by how well they match you. We don’t endorse anyone.</p>
       <h2>Check our work</h2>

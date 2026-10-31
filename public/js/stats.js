@@ -3,8 +3,8 @@
 //   a  — answers as a string of digits 0-4, "x" for skipped (e.g. "3401x2...")
 //   st — two-letter state code, only if the person chose to give it
 // Nothing else: no IP, no timestamp from the browser, no cookies, no account.
-// A Cloud Function folds each new submission into one summary document that
-// every visitor reads (see functions/index.js).
+// Every few minutes a GitHub Actions job folds new submissions into one summary
+// document that every visitor reads, then deletes them (see tally/tally.mjs).
 
 import { CONFIG } from './config.js';
 import { QUESTIONS, QUESTION_SET_VERSION } from './questions.js';

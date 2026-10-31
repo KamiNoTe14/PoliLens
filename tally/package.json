@@ -1,0 +1,10 @@
+{
+  "name": "polilens-tally",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": { "tally": "node tally.mjs" },
+  "dependencies": {
+    "firebase-admin": "^12.6.0"
+  }
+}
