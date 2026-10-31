@@ -21,5 +21,5 @@ export const CONFIG = {
 
   // Google Civic Information API key (restrict it to your domain in Google Cloud).
   // Without it, the ballot page links out to official lookup tools instead.
-  civicApiKey: '',
+  civicApiKey: 'AIzaSyCBi1RQNy-xYdFYxezvf46Y9XUnm4FCYuI',
 };
