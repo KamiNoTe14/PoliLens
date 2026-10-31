@@ -25,6 +25,20 @@ cd public && python3 -m http.server 8080
 ```
 Open http://localhost:8080. Without Firebase config it runs in demo mode.
 
+## Hosting on GitHub Pages (current setup)
+
+The site itself is served by GitHub Pages at `https://kaminote14.github.io/PoliLens/`. The workflow in `.github/workflows/pages.yml` publishes `public/` on every push to `main`.
+
+One-time setup: repo **Settings → Pages → Source: GitHub Actions**.
+
+Firebase is still used for the anonymous totals (Firestore + one Cloud Function), just not for hosting. Follow steps 1–5 below, then deploy only the backend:
+
+```
+firebase deploy --only firestore,functions
+```
+
+When restricting the Civic API key (step 5), allow the referrer `kaminote14.github.io/*`. If you later add a custom domain such as polilens.app, add it as well.
+
 ## Deploy (about 20 minutes)
 
 1. **Firebase project.** console.firebase.google.com → Add project. Upgrade to the **Blaze** plan (Cloud Functions need it; at this scale it costs about nothing — set a $5 budget alert).
